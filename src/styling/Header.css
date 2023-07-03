@@ -1,0 +1,116 @@
+/* Add your custom styling here */
+.Links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav {
+    margin-left: auto;
+  }
+  
+  .nav-link {
+    color: white;
+    margin-right: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: #ffc107; /* Change the color on hover */
+    text-shadow: 0 0 5px rgba(255, 193, 7, 0.8); /* Add a text shadow on hover */
+  }
+  
+  input[type='button'] {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+  }
+  
+  input[type='button']:hover {
+    color: #ffc107; /* Change the color on hover */
+    text-shadow: 0 0 10px rgba(255, 193, 7, 0.8); /* Add a text shadow on hover */
+  }
+  
+  /* Additional styles for responsiveness and cool effects */
+  
+  .navbar {
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+    background-color: #212529; /* Change the background color */
+    border-bottom: 2px solid #ffc107; /* Add a bottom border */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a box shadow */
+    overflow: hidden;
+  }
+  
+  .navbar:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .navbar:hover:before {
+    opacity: 1;
+  }
+  
+  .navbar-brand {
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+  }
+  
+  .navbar-brand:hover {
+    transform: scale(1.1); /* Add a scaling effect on hover */
+    text-shadow: 0 0 10px rgba(255, 193, 7, 0.8); /* Add a text shadow on hover */
+  }
+  
+  .nav-link:before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #ffc107;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  
+  .nav-link:hover:before {
+    transform: scaleX(1);
+    box-shadow: 0 2px 5px rgba(255, 193, 7, 0.4); /* Add a box shadow on hover */
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .navbar {
+      position: sticky;
+      top: 0;
+    }
+  }
+
+  img.logo{
+    size: 50%
+  }
+  

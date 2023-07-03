@@ -1,0 +1,12 @@
+.dlt-btn-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* Add desired styles for the delete button container */
+  }
+  
+  .dltBtn {
+    text-decoration: none;
+    color: blue;
+    cursor: pointer;
+  } 
