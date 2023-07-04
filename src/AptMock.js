@@ -10,7 +10,7 @@ let apartments = [
       bedrooms: 2,
       bathrooms: 2,
       pets: "yes",
-      image: "../assets/stock.jpeg", 
+      image: "../assets/1", 
       user_id: 1,
     },
     {
@@ -24,7 +24,7 @@ let apartments = [
       bedrooms: 2,
       bathrooms: 2,
       pets: "yes",
-      image: "../assets/stock.jpeg", 
+      image: "../assets/2", 
       user_id: 2,
     },
     {
@@ -38,7 +38,7 @@ let apartments = [
       bedrooms: 2,
       bathrooms: 2,
       pets: "yes",
-      image: "../assets/stock.jpeg", 
+      image: "../assets/3", 
       user_id: 3,
     },
   ];
