@@ -24,7 +24,7 @@ const App = (props) => {
   // const [user, setUser] = useState(UserMock);
   const [currentUser, setCurrentUser] = useState(null);
  
-  const url = "http://localhost:3000"
+  const url = "https://apartment-app-backend-gejb.onrender.com"
 
   useEffect(() => {
     readApts()
