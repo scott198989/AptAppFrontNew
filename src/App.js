@@ -12,9 +12,8 @@ import NotFound from './pages/NotFound';
 import LogIn from './components/LogIn';
 import SignUp from './components/SignUp';
 import ApartmentDelete from './pages/ApartmentDelete'
-
-// import AptMock from './AptMock';
-// import UserMock from './UserMock';
+import AptMock from './AptMock';
+import UserMock from './UserMock';
 
 
 
@@ -39,21 +38,23 @@ const App = (props) => {
       .catch((error) => console.log(error))
   }
   const createApartment = (apartment) => {
-    console.log(apartment);
+    // console.log(apartment);
     fetch(`${url}/apartments`, {
-      // ...
+      body: JSON.stringify(createdApartment),
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "POST"
     })
       .then((response) => response.json())
-      .then((payload) => {
-        readApts(payload); // Update the list of apartments
-        // ... other logic
-      })
+      .then((payload) => readApts())
       .catch((errors) => console.log("Apartment create errors:", errors));
   };
   
 
    // authentication function
    const login = (userInfo) => {
+    console.log("Login user info on App.js", userInfo)
     fetch(`${url}/login`, {
       body: JSON.stringify(userInfo),
       headers: {
@@ -66,7 +67,6 @@ const App = (props) => {
         if(!response.ok) {
           throw Error(response.statusText)
         }
-        // store the token
         localStorage.setItem("token", response.headers.get("Authorization"))
         return response.json()
       })
@@ -115,7 +115,7 @@ const App = (props) => {
   }
 
   const deleteApartment = (id) => {
-    fetch(`http://localhost:3000/apartments/${id}`, {
+    fetch(`https://apartment-app-backend-gejb.onrender.com/${id}`, {
       headers: {
         "Content-Type": "application/json"
       },
@@ -140,8 +140,8 @@ const App = (props) => {
       <Routes>
         <Route path="/" element={<Home apartments={apartments} />
 } /> 
-        <Route path="/ApartmentIndex" element={<ApartmentIndex  apartments={apartments}/>} />
-        <Route path="/ApartmentShow/:id" element={<ApartmentShow apartments={apartments} deleteApartment={deleteApartment}/>} />
+        <Route path="/ApartmentIndex" element={<ApartmentIndex  apartments={aptsMock}/>} />
+        <Route path="/ApartmentShow/:id" element={<ApartmentShow aptsMock={aptsMock} deleteApartment={deleteApartment}/>} />
         <Route path="/login" element={<LogIn login={login}/>} />
         <Route path="/SignUp" element={<SignUp signup={signup}/>} />
         {currentUser && (
@@ -155,7 +155,7 @@ const App = (props) => {
             />
           )}
          <Route path="/ApartmentNew" element={<ApartmentNew createApartment={createApartment}/>} />
-        <Route path="/ApartmentEdit" element={<ApartmentEdit apartments={apartments} setApartments={setApartments}/>} />
+        <Route path="/ApartmentEdit" element={<ApartmentEdit updateApts={updateApts} currentUser={currentUser}/>} />
         <Route path="*" element={<NotFound />} />
         <Route path="/ApartmentShow/:id"element={<ApartmentShow apartments={apartments} deleteApartment={deleteApartment} logged_in={props.logged_in} currentUser={props.current_user}  />}/>
       </Routes>
