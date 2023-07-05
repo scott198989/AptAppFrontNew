@@ -1,9 +1,7 @@
-
 import React from 'react';
 import { Card, CardTitle, CardSubtitle, CardBody, CardText, CardLink, Button } from 'reactstrap';
 import { useParams, Link, NavLink } from 'react-router-dom';
 import '../styling/ApartmentShow.css';
-import ApartmentDelete from './ApartmentDelete';
 
 const ApartmentShow = ({ apartments, deleteApartment, logged_in, currentUser }) => {
   const { id } = useParams();
@@ -14,7 +12,7 @@ const ApartmentShow = ({ apartments, deleteApartment, logged_in, currentUser }) 
   };
 
   if (!currentApt) {
-    return <div>Loading...</div>; // Add loading state or handle the case when currentApt is undefined
+    return <div>Loading...</div>;
   }
 
   return (

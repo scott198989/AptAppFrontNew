@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Form, FormGroup, Label, Input, Button } from "reactstrap";
 import { useNavigate } from "react-router-dom";
-import "../styling/ApartmentNew.css"
+import "../styling/ApartmentNew.css";
 
-const ApartmentNew = ({ createApartment, currentUser}) => {
+const ApartmentNew = ({ createApartment, currentUser }) => {
   const [newApartment, setNewApartment] = useState({
     street: "",
     unit: "",
@@ -15,7 +15,7 @@ const ApartmentNew = ({ createApartment, currentUser}) => {
     bathrooms: "",
     pets: "",
     image: "",
-    user_id: currentUser?.id
+    user_id: currentUser?.id,
   });
 
   const navigate = useNavigate();
@@ -24,8 +24,8 @@ const ApartmentNew = ({ createApartment, currentUser}) => {
     setNewApartment({ ...newApartment, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = () => {
-    createApartment(newApartment);
+  const handleSubmit = async () => {
+    await createApartment(newApartment);
     navigate("/apartmentIndex");
   };
 
