@@ -1,26 +1,35 @@
-Edit and delete buttons: 
-<div className="edit-btn-container">
-      <NavLink className="edtBtn" to={`/Apartment/${id}/Edit`}>
-        <span>Edit</span>
-      </NavLink>
-    </div>
-    <div className="dlt-btn-container">
-      <ApartmentDelete id={id} />
-    </div>
+## Apartment App Front End
 
+## Introduction
 
-    Removed this code from manifest json {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
+This was my second major project during my time at LEARN Academy.  The goal was to reach full CRUD to allow a user to be able to add a apartment, update (edit), or delete the apartment.
 
-     {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
+## Features
 
-    was getting this error when submitting new apartments
+Users can add, update, or delete their apartments
 
-    apartmentIndex:1 Error while trying to use the following icon from the Manifest: http://localhost:3001/logo512.png (Download error or resource isn't a valid image)
+## Dependencies
+
+If using homebrew:
+
+brew update
+
+brew install yarn
+
+yarn jest
+
+Team:
+
+Scott Tuschl
+
+Catalino Rodreguez 
+
+Surielis Rodreuguz
+
+Kyle Lohman 
+
+## Contact
+
+Thank you for checking out my first major class project!  If you would like to connect on linkedin you can do so at https://www.linkedin/in/scott-tuschl or if you would like to drop me a line, or check out some of the other projects I have done, you can do so by visiting my portfolio site at https://www.scott-tuschl.com
+
+Thank you!
