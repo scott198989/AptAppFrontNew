@@ -1,35 +1,54 @@
-## Apartment App Front End
+![Apartment App Front End](https://github.com/scott198989/AptAppFrontNew/blob/main/Apt%20App%20front.png)
 
-## Introduction
+# Apartment App Front End 🏢
 
-This was my second major project during my time at LEARN Academy.  The goal was to reach full CRUD to allow a user to be able to add a apartment, update (edit), or delete the apartment.
+## Table of Contents
+- [Introduction](#introduction)
+- [Features](#features)
+- [Dependencies](#dependencies)
+- [Team](#team)
+- [Contact](#contact)
 
-## Features
+## Introduction 🛠
 
-Users can add, update, or delete their apartments
+During my journey at LEARN Academy, I tackled my second major project: the Apartment App. This project showcases my skills in achieving full CRUD functionality, allowing users to add, update, and delete apartments. Feel the freedom of apartment management at your fingertips!
 
-## Dependencies
+---
 
-If using homebrew:
+## Features 🌟
+- **Add Apartments**: Got a new place? Log it in!
+- **Update Apartments**: Change is good. Update apartment details with ease.
+- **Delete Apartments**: Say goodbye to listings you no longer need.
 
+---
+
+## Dependencies 🛠
+
+Running this project locally? Here's what you'll need:
+
+```bash
+# Update Homebrew
 brew update
 
+# Install Yarn
 brew install yarn
 
+# Install Jest for testing
 yarn jest
+```
 
-Team:
+---
 
-Scott Tuschl
+## Team 🤝
 
-Catalino Rodreguez 
+- Scott Tuschl 
+- Catalino Rodriguez
+- Surielis Rodriguez
+- Kyle Lohman
 
-Surielis Rodreuguz
+---
 
-Kyle Lohman 
+## Contact 📞
 
-## Contact
+Thanks for checking out my project! If you want to connect or see what else I've been up to, you can find me on [LinkedIn](https://www.linkedin.com/in/scott-tuschl) or swing by my [portfolio site](https://www.scott-tuschl.com).
 
-Thank you for checking out my first major class project!  If you would like to connect on linkedin you can do so by clicking my linkedin on my GitHub profile page, or if you would like to drop me a line, or check out some of the other projects I have done, you can do so by visiting my portfolio site at https://www.scott-tuschl.com
-
-Thank you!
